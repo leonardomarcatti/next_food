@@ -1,8 +1,9 @@
-const Home = () => {
-  return <main>
-      <h1>Welcome to this NextJS Course!</h1>
-      <p>🔥 Let's get started! 🔥</p>
+export default function Home() {
+  return (
+    <main>
+      <h1 style={{ color: 'white', textAlign: 'center' }}>
+        Time to get started!
+      </h1>
     </main>
+  );
 }
-
-export default Home
