@@ -12,16 +12,17 @@
 </ul>
 
 <h2>🐳 Executando com Docker</h2>
-<p>1️⃣ Clone o repositório => git clone https://github.com/leonardomarcatti/next_food.git e entre na pasta do projeto => cd next_food</p>
-<p>2️⃣ Execute o container => docker compose up --build</p>
+<p>1️⃣ Clone o repositório => git clone https://github.com/leonardomarcatti/next_food.git e entre na pasta do projeto</p>
+<p>2️⃣ Crie e execute o container => docker compose up --build</p>
 <p>3️⃣ Acesse a aplicação => http://ip:3000</p>
 
 <h2>📱 Funcionalidades</h2>
-<span>🍔 Listagem de lanches</span>
-<span>🛒 Adicionar lanches ao carrinho</span>
-<span>📦 Visualização de pedidos</span>
-<span>⚡ Interface rápida usando Next.js</span>
-<span>📱 Layout responsivo</span>
+
+<p>🍔 Listagem de lanches</p>
+<p>🛒 Adicionar lanches ao carrinho</p>
+<p>📦 Visualização de pedidos</p>
+<p>⚡ Interface rápida usando Next.js</p>
+<p>📱 Layout responsivo</p>
 
 <h2>📄 Licença</h2>
 <p>Este projeto está sob a licença MIT.</p>
