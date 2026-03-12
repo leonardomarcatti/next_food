@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🍔 Snack Delivery App
 
-## Getting Started
+Aplicação web de delivery de lanches desenvolvida com Next.js 16 e React 19, containerizada com Docker para facilitar o ambiente de desenvolvimento e execução.
 
-First, run the development server:
+O objetivo da aplicação é permitir que usuários naveguem pelo cardápio, escolham lanches e realizem pedidos de forma simples e rápida.
 
-```bash
+🚀 Tecnologias Utilizadas
+
+React 19
+
+Next.js 16
+
+Docker
+
+Node.js
+
+JavaScript / TypeScript (opcional)
+
+🚀 Tecnologias Utilizadas
+
+React 19
+
+Next.js 16
+
+Docker
+
+Node.js
+
+JavaScript / TypeScript (opcional)
+
+
+🚀 Tecnologias Utilizadas
+
+React 19
+
+Next.js 16
+
+Docker
+
+Node.js
+
+JavaScript / TypeScript (opcional)
+
+
+🐳 Executando com Docker
+1️⃣ Clone o repositório
+git clone https://github.com/seu-usuario/snack-delivery-app.git
+
+Entre na pasta do projeto:
+
+cd snack-delivery-app
+2️⃣ Execute o container
+
+Na pasta raiz do projeto execute:
+
+docker compose up --build
+3️⃣ Acesse a aplicação
+
+Abra no navegador:
+
+http://localhost:3000
+
+A porta 3000 do host está mapeada para o container Docker.
+
+📱 Funcionalidades
+
+🍔 Listagem de lanches
+
+🛒 Adicionar lanches ao carrinho
+
+📦 Visualização de pedidos
+
+⚡ Interface rápida usando Next.js
+
+📱 Layout responsivo
+
+⚙️ Variáveis de Ambiente
+
+Caso o projeto utilize variáveis de ambiente, crie um arquivo:
+
+.env.local
+
+Exemplo:
+
+NEXT_PUBLIC_API_URL=http://localhost:3000/api
+🧑‍💻 Desenvolvimento
+
+Para rodar sem Docker:
+
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+A aplicação estará disponível em:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+http://localhost:3000
+📌 Scripts
+Script	Descrição
+npm run dev	Inicia ambiente de desenvolvimento
+npm run build	Gera build de produção
+npm run start	Inicia aplicação em produção
+📄 Licença
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este projeto está sob a licença MIT.
