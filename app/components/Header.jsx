@@ -1,15 +1,20 @@
 import Link from 'next/link';
+import logo from '@/app/assets/logo.png'
+import styles from './Header.module.css'
 
 const Header = () => {
-   return <header>
+   return <header className={styles.header}>
       <span>
-         <h1>Next Food</h1>
-         <img src="/logo.png" alt="A server surrounded by magic sparkles." />
+      <Link href='/'>
+         <h1>Next Level Food</h1>
+         <img src={logo.src} alt="A plate with food in it" srcset="" />
+      </Link>
       </span>
       <nav>
          <Link href='/'>Home</Link>
-         <Link href='/about'>About us</Link>
-         <Link href='/blog'>Blog</Link>
+         <Link href='/meals'>Meals</Link>
+         <Link href='/meals/share'>Share</Link>
+         <Link href='/community'>Comunity</Link>
       </nav>
    </header>
 }

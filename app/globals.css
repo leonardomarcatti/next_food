@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Montserrat:wght@400;700&display=swap');
 
 * {
-  box-sizing: border-box;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
 }
 
 html {
   font-family: 'Quicksand', sans-serif;
 }
 
+
 body {
-  margin: 0;
-  background: radial-gradient(#282c34, #282c34);
+  background: radial-gradient(#282c34, #272a31);
 }
 
 .header-background {
@@ -54,4 +56,10 @@ svg {
   font-size: 1.5rem;
   font-weight: 500;
   color: #ddd8d8;
+}
+
+@media (min-width: 768px) {
+   .header {
+      padding: 2rem 10%;
+   }
 }
