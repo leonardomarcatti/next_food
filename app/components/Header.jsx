@@ -2,8 +2,10 @@ import Link from 'next/link';
 import logo from '@/app/assets/logo.png'
 import styles from './Header.module.css'
 import Image from 'next/image';
+import Nav from './Nav';
 
 const Header = () => {
+
    return <header className={styles.header}>
       <span>
       <Link href='/'>
@@ -11,12 +13,7 @@ const Header = () => {
          <Image src={logo}  alt="A plate with food in it" />
       </Link>
       </span>
-      <nav>
-         <Link href='/'>Home</Link>
-         <Link href='/meals'>Meals</Link>
-         <Link href='/meals/share'>Share</Link>
-         <Link href='/community'>Comunity</Link>
-      </nav>
+      <Nav />
    </header>
 }
 
