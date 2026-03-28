@@ -1,13 +1,14 @@
 import Link from 'next/link';
 import logo from '@/app/assets/logo.png'
 import styles from './Header.module.css'
+import Image from 'next/image';
 
 const Header = () => {
    return <header className={styles.header}>
       <span>
       <Link href='/'>
          <h1>Next Level Food</h1>
-         <img src={logo.src} alt="A plate with food in it" srcset="" />
+         <Image src={logo}  alt="A plate with food in it" />
       </Link>
       </span>
       <nav>
