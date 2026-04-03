@@ -1,25 +1,8 @@
 'use client'
-
-import styles from './slideshow.module.css'
-import burgerImg from '@/app/assets/burger.jpg';
-import curryImg from '@/app/assets/curry.jpg';
-import dumplingsImg from '@/app/assets/dumplings.jpg';
-import macncheeseImg from '@/app/assets/macncheese.jpg';
-import pizzaImg from '@/app/assets/pizza.jpg';
-import schnitzelImg from '@/app/assets/schnitzel.jpg';
-import tomatoSaladImg from '@/app/assets/tomato-salad.jpg';
 import { useState, useEffect } from 'react';
+import images from '@/data/images';
+import styles from './slideshow.module.css'
 import Image from 'next/image';
-
-const images = [
-   { image: burgerImg, alt: 'A delicious, juicy burger' },
-   { image: curryImg, alt: 'A delicious, spicy curry' },
-   { image: dumplingsImg, alt: 'Steamed dumplings' },
-   { image: macncheeseImg, alt: 'Mac and cheese' },
-   { image: pizzaImg, alt: 'A delicious pizza' },
-   { image: schnitzelImg, alt: 'A delicious schnitzel' },
-   { image: tomatoSaladImg, alt: 'A delicious tomato salad' },
-];
 
 const SlideShow = () => {
    const [currentImageIndex, setCurrentImageIndex] = useState(0);

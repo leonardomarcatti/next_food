@@ -1,0 +1,49 @@
+services:
+  next_app:
+    container_name: next_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    depends_on:
+      next_app_db:
+        condition: service_healthy
+    environment:
+      DB_HOST: next_app_db
+      DB_PORT: 3306
+      DB_DATABASE: nextdb
+      DB_USER: admin
+      DB_PASSWORD: A9x*UwARA5@
+    networks:
+      - app_network
+
+  next_app_db:
+    container_name: next_app_db
+    image: mysql:9.6
+    restart: always
+    ports:
+      - "3305:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: nextdb
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: A9x*UwARA5@
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - app_network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  db_data:
+
+networks:
+  app_network:
+    driver: bridge
