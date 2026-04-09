@@ -2,17 +2,24 @@ import Link from 'next/link'
 import styles from './page.module.css'
 import Meals from '../components/Meals'
 import { getDbConnection } from '@/data/db'
+import { Suspense } from 'react'
 
-async function getMeals() {
+const getMeals = async () => {
    const db = await getDbConnection()
    const [rows] = await db.execute('SELECT * FROM meals')
    await db.end()
+   await new Promise(resolve => setTimeout(resolve, 2000)) //Adiciona um delay
+   // throw new Error('Loading meals failed..')
    return rows
 }
 
-const Page = async () => {
-   const meals = await getMeals()
 
+const Grid = async () => {
+   const meals = await getMeals()
+   return < Meals meals = { meals } />
+}
+
+const Page = async () => {
    return <>
       <header className={styles.header}>
          <h1>
@@ -25,7 +32,9 @@ const Page = async () => {
       </header>
 
       <main className={styles.main}>
-         <Meals meals={meals} />
+         <Suspense fallback={<h2 className={styles.loading}>Fetching meals...</h2>}>
+            <Grid />
+         </Suspense>
       </main>
    </>
 }

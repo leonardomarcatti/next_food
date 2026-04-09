@@ -44,6 +44,12 @@ body {
   color: #ddd8d8;
 }
 
+.not-found a {
+   color: black;
+   text-shadow: 0 0 10px white;
+   text-decoration: none;
+}
+
 @media (min-width: 768px) {
    .header {
       padding: 2rem 10%;
