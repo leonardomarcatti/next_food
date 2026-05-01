@@ -23,7 +23,7 @@ services:
   next_app_db:
     container_name: next_app_db
     image: mysql:9.6
-    restart: always
+    restart: no
     ports:
       - "3305:3306"
     environment:

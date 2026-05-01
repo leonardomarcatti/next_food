@@ -3,7 +3,8 @@
 const Error = () => {
    return <main className="error">
       <h1>Warning!</h1>
-      <p>It was not possible to fetch meals. Please tray again later...</p>
+      <p>It was not possible to fetch meals.</p>
+      <p>Please tray again later...</p>
    </main>
 }
 
